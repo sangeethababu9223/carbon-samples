@@ -1,0 +1,9 @@
+.sample-listing {
+  list-style-type: none;
+  padding-inline-start: 0;
+  font-size: 1.2rem;
+  &__item {
+    cursor: pointer;
+    padding-bottom: .5rem;
+  }
+}
