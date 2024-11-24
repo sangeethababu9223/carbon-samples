@@ -1,6 +1,8 @@
 import './App.scss'
 import Samples from './Samples/Samples';
 import AccordionCustom from './Accordion/AccordionCustom'
+import AILabelCustom from './AILabel/AILabelCustom';
+
 import { useState } from 'react';
 function App() {
   const [customComponent, setCustomComponent] = useState(<Samples/>);
@@ -9,6 +11,9 @@ function App() {
     switch(option) {
       case 1:
         setCustomComponent(<AccordionCustom/>);
+        break;
+      case 2:
+        setCustomComponent(<AILabelCustom/>);
         break;
       default:
         setCustomComponent(<Samples/>);
@@ -20,6 +25,7 @@ function App() {
       <h1>Carbon Samples</h1>
       <ul className='sample-listing'>
         <li className='sample-listing__item' onClick={()=>chooseComponent(1)}>Accordion</li>
+        <li className='sample-listing__item' onClick={()=>chooseComponent(2)}>AI Label</li>
         <li className='sample-listing__item' onClick={()=>chooseComponent(0)}>Back to listing</li>
       </ul>
       {customComponent}
